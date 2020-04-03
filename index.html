@@ -2,16 +2,45 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta name="description" content="LEGO blocks this our world, come join us!">
         <meta name="author" content="Piotr Gadecki">
         <title>All about LEGO</title>
+        <link rel="stylesheet" href="./styles/style.css" type="text/css">
     </head>
     <body>
-        <div id="all">
-            <div id="top"></div>
-            <div id="mid"></div>
-            <div id="bottom"></div>
-        </div>
+        <div id="all" class="all">
+            <!--######--TOP--######-->
+            <div id="top" class="top">
+                <nav id="menu" class="menu">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./sub/about.html">About</a></li>
+                        <li>
+                            <a href="./sub/offer.html">Offer</a>
+                            <ul>
+                                <li><a href="">Assembling</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Scouting</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./sub/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--######--MID--######-->
+            <div id="mid" class="mid">
+                <div id="content" class="content">
+                    <div id="con-image" class="con-image">
+                        <img src="./images/home.jpg" class="con-image">
+                    </div>
+                    <div id="con-text" class="con-text">
+                        <p> Welcome on page All about LEGO. On this page you can find a lot of LEGO models descriptions and get know with our company services.</p>
+                    </div>
+                </div>
+            </div>
+            <!--######--BOTTOM--######-->
+            <div id="bottom" class="class-test"></div>
+        </div>  
     </body>
 </html>

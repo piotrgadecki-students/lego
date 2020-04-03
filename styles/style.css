@@ -1,0 +1,39 @@
+@media all and (max-width: 767px)
+{
+    div.all {
+        float: left;
+        width: 100%;
+        min-height: 350px;
+    }
+
+    div.top {
+        float: left;
+        width: 100%;
+    }
+
+    div.mid {
+        float: left;
+        width: 100%;
+    }
+
+    div.content {
+        float: left;
+        width: 100%;
+    }
+
+    div.con-image {
+        float: left;
+        width: 30%;
+        margin: 0 10px 10px 0;
+    }
+
+    img.con-image {
+        width: 100%;
+    }
+
+    div.con-text { 
+        float: left;  
+        width: 60%;  
+        text-align: justify;     
+    }
+}
