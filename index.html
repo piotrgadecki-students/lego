@@ -7,6 +7,8 @@
         <meta name="author" content="Piotr Gadecki">
         <title>All about LEGO</title>
         <link rel="stylesheet" href="./styles/style.css" type="text/css">
+        <script type="text/javascript" src="./scripts/jquery2.0.3.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </head>
     <body>
         <div id="all" class="all">
@@ -15,6 +17,9 @@
                 <!--######--BANNER--######-->
                 <div id="banner" class="banner">
                     <img class="banner_image" src="./images/banner.jpg">
+                    <div id="menu-box" class="menu-box">
+                        <a class="menu-link" href="#menu">MENU</a>
+                    </div>
                 </div>
                 <!--######--MENU--######-->
                 <nav id="menu" class="menu">
@@ -48,7 +53,32 @@
                 </div>
             </div>
             <!--######--BOTTOM--######-->
-            <div id="bottom" class="class-test"></div>
+            <div id="bottom" class="bottom">
+                <div class="nav-bottom">
+                    <a href="./index.html">Home</a>
+                    <a href="./sub/about.html">About</a>
+                    <a href="./sub/offer.html">Offer</a>
+                    <a href="./sub/contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; Copyright by <a href="mailto:info@allaboutlego.com">All about LEGO</a>
+                </div>
+            </div>
+            <!--#######--SCRIPT START--#######-->
+            <script>
+                jQuery( document ).ready( function( $ ) {
+                
+                    var $menu = $('#menu'),
+                    $menulink = $('.menu-link');
+                
+                    $menulink.click(function(e) {
+                        e.preventDefault();
+                        $menulink.toggleClass('active');
+                        $menu.toggleClass('active');
+                    });
+                });
+            </script>
+            <!--#######--SCRIPT END--#######-->
         </div>  
     </body>
 </html>

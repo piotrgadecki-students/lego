@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'LegoFont';
+    font-weight: normal;
+    font-style: normal;
+    src: local('☺'),
+        url('../fonts/Legothick.eot?') format('eot'),
+        url('../fonts/Legothick.svg#Legothick') format('svg'),
+        url('../fonts/Legothick.ttf') format('truetype'),
+        url('../fonts/Legothick.woff') format('woff');
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -17,6 +28,8 @@ a:hover {
 img.banner_image {
     max-height: 231px;
     max-width: 100%;
+    z-index: 1;
+    display: block;
 }
 
 @media all and (max-width: 767px)
@@ -35,6 +48,24 @@ img.banner_image {
     div.banner {
         float: left;
         width: 100%;
+        position: relative;
+    }
+
+    div.menu-box {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 100;
+    }
+
+    a.menu-link {
+        background: rgb(255, 0, 0);
+        padding: 21px 10px;
+        font-family: 'LegoFont', Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 23px;
+        display: block;
+        text-shadow: 1px 0px 0px white;
     }
 
     div.mid {
@@ -45,16 +76,21 @@ img.banner_image {
     div.content {
         float: left;
         width: 100%;
+        margin: 10px 0 0 10px;
     }
 
     div.con-image {
         float: left;
         width: 30%;
         margin: 0 10px 10px 0;
+        -webkit-box-shadow: 0px 0px 29px 0px rgb(158, 158, 158);
+        -moz-box-shadow: 0px 0px 29px 0px rgb(158, 158, 158);
+        box-shadow: 0px 0px 29px 0px rgb(158, 158, 158);
     }
 
     img.con-image {
         width: 100%;
+        display: block;
     }
 
     div.con-text { 
@@ -66,6 +102,11 @@ img.banner_image {
     nav.menu {
         float: left;
         width: 100%;
+        display: none;
+    }
+
+    nav.menu.active {
+        display: block;
     }
 
     .menu > ul {
@@ -90,5 +131,19 @@ img.banner_image {
         float: left;
         padding: 11px 0 11px 11px;
         width: 97%;
+    }
+
+    div.bottom {
+        text-align: center;
+        height: 150px;
+        background: linear-gradient(to top, #ffffff 17%, #e4e3e3 100%);
+    }
+
+    div.nav-bottom {
+        margin: 20px 0 20px 0;
+    }
+
+    .nav-bottom a {
+        border-right: 1px solid rgba(0, 0, 0, 0.4);
     }
 }
