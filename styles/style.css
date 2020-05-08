@@ -32,6 +32,12 @@ img.banner_image {
     display: block;
 }
 
+hr.gradient {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 @media all and (max-width: 767px)
 {
     div.all {
@@ -75,8 +81,18 @@ img.banner_image {
 
     div.content {
         float: left;
-        width: 100%;
+        width: 98%;
         margin: 10px 0 0 10px;
+    }
+
+    .content:nth-child(even), .content:nth-child(even) div {
+        float: right;
+        text-align: right;
+    }
+
+    p.con-title {
+        font-weight: bold;
+        margin: 16px 10px 16px 0
     }
 
     div.con-image {
@@ -97,6 +113,15 @@ img.banner_image {
         float: left;  
         width: 60%;  
         text-align: justify;     
+    }
+
+    .content:nth-child(even) .con-text {
+        text-align: justify;
+        margin: 0 10px 0 0;
+    }
+
+    div.con-text p {
+        margin: 0;
     }
 
     nav.menu {
@@ -133,10 +158,19 @@ img.banner_image {
         width: 97%;
     }
 
+    div.slider {
+        float: left;
+        width: 100%;
+        margin: 20px 0 15px 0;
+        box-shadow: 0px 0px 29px 0px rgb(158, 158, 158);
+    }
+
     div.bottom {
+        float: left;
         text-align: center;
         height: 150px;
-        background: linear-gradient(to top, #ffffff 17%, #e4e3e3 100%);
+        background: linear-gradient(to top, #ffffff 70%, #e4e3e3 100%);
+        width: 100%;
     }
 
     div.nav-bottom {
@@ -145,5 +179,10 @@ img.banner_image {
 
     .nav-bottom a {
         border-right: 1px solid rgba(0, 0, 0, 0.4);
+        padding: 0 5px 0 2px;
+    }
+
+    .nav-bottom a:last-of-type {
+        border-right: none;
     }
 }

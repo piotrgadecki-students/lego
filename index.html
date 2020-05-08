@@ -7,8 +7,10 @@
         <meta name="author" content="Piotr Gadecki">
         <title>All about LEGO</title>
         <link rel="stylesheet" href="./styles/style.css" type="text/css">
+        <link rel="stylesheet" href="./styles/slippry.css" type="text/css">
         <script type="text/javascript" src="./scripts/jquery2.0.3.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./scripts/slippry.min.js"></script>
     </head>
     <body>
         <div id="all" class="all">
@@ -16,7 +18,9 @@
             <div id="top" class="top">
                 <!--######--BANNER--######-->
                 <div id="banner" class="banner">
-                    <img class="banner_image" src="./images/banner.jpg">
+                    <a href="./index.html">
+                        <img class="banner_image" src="./images/banner.jpg">
+                    </a>
                     <div id="menu-box" class="menu-box">
                         <a class="menu-link" href="#menu">MENU</a>
                     </div>
@@ -52,6 +56,20 @@
                     </div>
                 </div>
             </div>
+            <!--######--SLIDER--#######-->
+            <div id="slider-box" class="slider">
+                <ul id="slider">
+                    <li>
+                        <a href="#slide1"><img src="./images/bulding_proccess.jpg" alt="Profesional LEGO assembling"></a>
+                    </li>
+                    <li>
+                        <a href="#slide2"><img src="./images/accessories.jpg" alt="Accessories for LEGO blocks"></a>
+                    </li>
+                    <li>
+                        <a href="#slide3"><img src="./images/exclusive.jpg" alt="Scouting of limited LEGO edition"></a>
+                    </li>
+                </ul>
+            </div>
             <!--######--BOTTOM--######-->
             <div id="bottom" class="bottom">
                 <div class="nav-bottom">
@@ -75,6 +93,15 @@
                         e.preventDefault();
                         $menulink.toggleClass('active');
                         $menu.toggleClass('active');
+                    });
+                });
+
+                $(function() {
+                    var demo1 = $("#slider").slippry({
+                        pager: false,
+                        transition: 'kenburns',
+                        slideMargin: 10,
+                        adaptiveHeight: false
                     });
                 });
             </script>
