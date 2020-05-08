@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    contact
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="description" content="LEGO blocks this our world, come join us!">
+        <meta name="author" content="Piotr Gadecki">
+        <title>All about LEGO</title>
+        <link rel="stylesheet" href="../styles/style.css" type="text/css">
+        <script type="text/javascript" src="../scripts/jquery2.0.3.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="all" class="all">
+            <!--######--TOP--######-->
+            <div id="top" class="top">
+                <!--######--BANNER--######-->
+                <div id="banner" class="banner">
+                    <a href="../index.html">
+                        <img class="banner_image" src="../images/banner.jpg">
+                    </a>
+                    <div id="menu-box" class="menu-box">
+                        <a class="menu-link" href="#menu">MENU</a>
+                    </div>
+                </div>
+                <!--######--MENU--######-->
+                <nav id="menu" class="menu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <a href="offer.html">Offer</a>
+                            <ul>
+                                <li><a href="">Assembling</a></li>
+                                <li><a href="">Accessories</a></li>
+                                <li><a href="">Scouting</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--######--MID--######-->
+            <div id="mid" class="mid">
+                <div id="content" class="content">
+                </div>
+            </div>
+            
+            <!--######--BOTTOM--######-->
+            <div id="bottom" class="bottom">
+                <div class="nav-bottom">
+                    <a href="../index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="offer.html">Offer</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; Copyright by <a href="mailto:info@allaboutlego.com">All about LEGO</a>
+                </div>
+            </div>
+            <!--#######--SCRIPT START--#######-->
+            <script>
+                jQuery( document ).ready( function( $ ) {
+                
+                    var $menu = $('#menu'),
+                    $menulink = $('.menu-link');
+                
+                    $menulink.click(function(e) {
+                        e.preventDefault();
+                        $menulink.toggleClass('active');
+                        $menu.toggleClass('active');
+                    });
+                });
+            </script>
+            <!--#######--SCRIPT END--#######-->
+        </div>  
+    </body>
 </html>
